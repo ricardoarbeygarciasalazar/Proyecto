@@ -1,0 +1,6 @@
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\bin\Debug\ProyectoWeb1Ricardo.Logica.dll
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\bin\Debug\ProyectoWeb1Ricardo.Logica.pdb
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\obj\Debug\ProyectoWeb1Ricardo.Logica.csprojResolveAssemblyReference.cache
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\obj\Debug\ProyectoWeb1Ricardo.Logica.csproj.CoreCompileInputs.cache
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\obj\Debug\ProyectoWeb1Ricardo.Logica.dll
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\obj\Debug\ProyectoWeb1Ricardo.Logica.pdb

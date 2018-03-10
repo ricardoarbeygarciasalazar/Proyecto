@@ -1,0 +1,11 @@
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\ProyectoWeb1Ricardo.Web.dll.config
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\ProyectoWeb1Ricardo.Web.dll
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\ProyectoWeb1Ricardo.Web.pdb
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\obj\Debug\ProyectoWeb1Ricardo.Web.csprojResolveAssemblyReference.cache
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\obj\Debug\ProyectoWeb1Ricardo.Web.csproj.CoreCompileInputs.cache
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\obj\Debug\ProyectoWeb1Ricardo.Web.dll
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\obj\Debug\ProyectoWeb1Ricardo.Web.pdb
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\ProyectoWeb1Ricardo.Logica.dll
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\ProyectoWeb1Ricardo.Logica.pdb
