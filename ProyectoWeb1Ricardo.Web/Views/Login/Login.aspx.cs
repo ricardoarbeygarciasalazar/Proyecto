@@ -30,7 +30,7 @@ namespace ProyectoWeb1Ricardo.Web.Views.Login
                 Controllers.LoginController obloginController = new Controllers.LoginController();
                 bool blBandera = obloginController.getValidarUsuarioController(obclsUsuarios);
 
-
+                //mod
                 if (blBandera)
                     Response.Redirect("../Index/Index.aspx");//redirecciono
                 else
