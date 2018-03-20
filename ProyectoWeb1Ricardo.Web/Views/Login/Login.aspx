@@ -51,7 +51,7 @@
 
                 </form>
                 <div class="text-center">
-                    <a class="d-block small mt-3" href="register.html">Registrar cuenta</a>
+                    <a class="d-block small mt-3" href="../RegistrarCuenta/RegistrarCuenta.aspx">Registrar cuenta</a>
                     <a class="d-block small" href="forgot-password.html">¿Olvidaste tu password?</a>
                 </div>
             </div>
