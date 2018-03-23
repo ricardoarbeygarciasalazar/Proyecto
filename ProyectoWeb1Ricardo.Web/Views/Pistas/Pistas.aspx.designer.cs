@@ -13,24 +13,6 @@ namespace ProyectoWeb1Ricardo.Web.Views.PosiblesClientes {
     public partial class PosiblesClientes {
         
         /// <summary>
-        /// Control lblEmpresa.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmpresa;
-        
-        /// <summary>
-        /// Control txtEmpresa.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmpresa;
-        
-        /// <summary>
         /// Control lblNombres.
         /// </summary>
         /// <remarks>
@@ -65,24 +47,6 @@ namespace ProyectoWeb1Ricardo.Web.Views.PosiblesClientes {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlGenero;
-        
-        /// <summary>
-        /// Control lblTieneCorreo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTieneCorreo;
-        
-        /// <summary>
-        /// Control chkTieneCorreo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkTieneCorreo;
         
         /// <summary>
         /// Control btnAceptar.

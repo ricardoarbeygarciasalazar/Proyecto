@@ -38,19 +38,31 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="#">
+            <i class="fa fa-fw fa-headphones"></i>
+            <span class="nav-link-text">Tu Perfil</span>
+          </a>
+        </li>
+          
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="#">
             <i class="fa fa-fw fa-music"></i>
-            <span class="nav-link-text">Posibles Clientes</span>
+            <span class="nav-link-text">Tus Pistas Favoritas</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="#">
-            <i class="fa fa-fw fa-headphones"></i>
-            <span class="nav-link-text">Clientes</span>
+          <a class="nav-link" href="../../Views/Pistas/Pistas.aspx">
+            <i class="fa fa-fw fa-music"></i>
+            <span class="nav-link-text">Compra Una Pista</span>
           </a>
         </li>
-      
+       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="../../Views/SubirPistas/SubirPistas.aspx">
+            <i class="fa fa-fw fa-music"></i>
+            <span class="nav-link-text">Sube  Pistas</span>
+          </a>
+        </li>
       </ul>
     
       <ul class="navbar-nav ml-auto">

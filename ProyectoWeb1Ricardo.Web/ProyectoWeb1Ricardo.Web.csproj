@@ -76,7 +76,7 @@
     <Content Include="js\sb-admin.min.js" />
     <Content Include="js\sweetalert.min.js" />
     <Content Include="Views\Index\Index.aspx" />
-    <Content Include="Views\PosiblesClientes\PosiblesClientes.aspx" />
+    <Content Include="Views\Pistas\Pistas.aspx" />
     <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
     <Content Include="vendor\bootstrap\js\bootstrap.bundle.js.map" />
@@ -159,6 +159,7 @@
     <Content Include="vendor\jquery\jquery.slim.min.js" />
     <Content Include="Views\Login\Login.aspx" />
     <Content Include="Views\RegistrarCuenta\RegistrarCuenta.aspx" />
+    <Content Include="Views\SubirPistas\SubirPistas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -185,12 +186,12 @@
     <Compile Include="Views\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\PosiblesClientes\PosiblesClientes.aspx.cs">
-      <DependentUpon>PosiblesClientes.aspx</DependentUpon>
+    <Compile Include="Views\Pistas\Pistas.aspx.cs">
+      <DependentUpon>Pistas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\PosiblesClientes\PosiblesClientes.aspx.designer.cs">
-      <DependentUpon>PosiblesClientes.aspx</DependentUpon>
+    <Compile Include="Views\Pistas\Pistas.aspx.designer.cs">
+      <DependentUpon>Pistas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\RegistrarCuenta\RegistrarCuenta.aspx.cs">
       <DependentUpon>RegistrarCuenta.aspx</DependentUpon>
@@ -198,6 +199,13 @@
     </Compile>
     <Compile Include="Views\RegistrarCuenta\RegistrarCuenta.aspx.designer.cs">
       <DependentUpon>RegistrarCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubirPistas\SubirPistas.aspx.cs">
+      <DependentUpon>SubirPistas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\SubirPistas\SubirPistas.aspx.designer.cs">
+      <DependentUpon>SubirPistas.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
