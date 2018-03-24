@@ -13,5 +13,11 @@ namespace ProyectoWeb1Ricardo.Web.Resources.Template
         {
 
         }
+
+        protected void lbSalir_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("../../Views/Login/Login.aspx");
+        }
     }
 }
