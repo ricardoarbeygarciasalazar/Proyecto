@@ -26,7 +26,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../../js/sb-admin.min.js"></script>
- 
+ <asp:ContentPlaceHolder runat="server" ID="header"></asp:ContentPlaceHolder>
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 <form runat="server">
@@ -58,7 +58,7 @@
           </a>
         </li>
        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="../../Views/SubirPistas/SubirPistas.aspx">
+          <a class="nav-link" href="../../Views/SubirPista/SubirPista.aspx">
             <i class="fa fa-fw fa-music"></i>
             <span class="nav-link-text">Sube  Pistas</span>
           </a>

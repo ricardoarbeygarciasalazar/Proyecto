@@ -9,3 +9,4 @@ C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\obj\Debug\
 C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\obj\Debug\ProyectoWeb1Ricardo.Web.pdb
 C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\ProyectoWeb1Ricardo.Logica.dll
 C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\ProyectoWeb1Ricardo.Logica.pdb
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\obj\Debug\ProyectoWeb1Ricardo.Web.csproj.CopyComplete

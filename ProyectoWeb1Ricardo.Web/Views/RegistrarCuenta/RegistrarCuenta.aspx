@@ -38,7 +38,7 @@
         <div class="form-group">
 
             <div class="form-row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <asp:label runat="server" id="lblNombre" text="Ingresa Tu Nombre:"></asp:label>
                     <asp:textbox runat="server" id="txtNombre" cssclass="form-Control"></asp:textbox>
                 </div>

@@ -22,7 +22,7 @@ namespace ProyectoWeb1Ricardo.Logica.BL
         /// <param name="obclUsuarios">Objeto usuario </param>
         /// <returns>Confirmacion</returns>
 
-        public bool getValidarUsuario(Models.clsUsuarios obclUsuarios) {
+        public bool getValidarUsuario(Logica.Models.clsUsuarios obclUsuarios) {
             try
             {
                 DataSet dsConsulta = new DataSet();
@@ -34,8 +34,8 @@ namespace ProyectoWeb1Ricardo.Logica.BL
                 _sqlCommand = new SqlCommand("spConsultarUsuario", _sqlConnection);
                 _sqlCommand.CommandType = CommandType.StoredProcedure;
 
-                _sqlCommand.Parameters.Add(new SqlParameter("@cLogin", obclUsuarios.stLogin));
-                _sqlCommand.Parameters.Add(new SqlParameter("@cPassword", obclUsuarios.stPassword));
+                _sqlCommand.Parameters.Add(new SqlParameter("@cLogin", obclUsuarios.stCorreoElectronico));
+                _sqlCommand.Parameters.Add(new SqlParameter("@cPassword", obclUsuarios.stContraseña));
 
 
                 _sqlCommand.ExecuteNonQuery();

@@ -33,8 +33,8 @@ namespace ProyectoWeb1Ricardo.Web.Views.Login
                 //defino objeto con propiedades
                 Logica.Models.clsUsuarios obclsUsuarios = new Logica.Models.clsUsuarios
                 {
-                    stLogin = txtEmail.Text,
-                    stPassword = txtPassword.Text,
+                    stCorreoElectronico = txtEmail.Text,
+                    stContraseña = txtPassword.Text,
                 };
                 //instancio controlador
                 Controllers.LoginController obloginController = new Controllers.LoginController();

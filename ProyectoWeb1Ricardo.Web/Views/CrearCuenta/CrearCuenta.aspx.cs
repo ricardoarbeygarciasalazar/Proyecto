@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ProyectoWeb1Ricardo.Web.Views.PosiblesClientes
+namespace ProyectoWeb1Ricardo.Web.Views.CrearCuenta
 {
-    public partial class PosiblesClientes : System.Web.UI.Page
+    public partial class CrearCuenta : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

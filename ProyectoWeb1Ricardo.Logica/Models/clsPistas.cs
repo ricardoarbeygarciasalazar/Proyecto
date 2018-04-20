@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace ProyectoWeb1Ricardo.Logica.Models
 {
-    class clsPistas
+   public class clsPistas
     {
+        public int inCodigo { get; set; }
+        public string stNombre { get; set; }
+        public string stGenero { get; set; }
+        public string stDemo { get; set; }
+        public string stObservacion { get; set; }
+       
 
-
-
-}
+    }
 }

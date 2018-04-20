@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Resources/Template/Template.Master" AutoEventWireup="true" CodeBehind="Pistas.aspx.cs" Inherits="ProyectoWeb1Ricardo.Web.Views.PosiblesClientes.PosiblesClientes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Resources/Template/Template.Master" AutoEventWireup="true" CodeBehind="BuscarPistas.aspx.cs" Inherits="ProyectoWeb1Ricardo.Web.Views.PosiblesClientes.PosiblesClientes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Contenedor" runat="server">
     <div class="mx-auto mt-5">
