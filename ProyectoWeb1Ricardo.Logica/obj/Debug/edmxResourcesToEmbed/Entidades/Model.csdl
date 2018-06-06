@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DrumsyLoopsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Creditos">
+    <Key>
+      <PropertyRef Name="Cantidad" />
+    </Key>
+    <Property Name="CodigoCredito" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valor" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.UsuarioCreditos" FromRole="Creditos" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Pistas">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Genero" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Demo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Observacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UsuariosPistas" Relationship="Self.FK_UsuariosPistas_Pistas" FromRole="Pistas" ToRole="UsuariosPistas" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="CorreoElectronico" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="UsuariosPistas" Relationship="Self.FK_UsuariosPistas_Usuarios" FromRole="Usuarios" ToRole="UsuariosPistas" />
+    <NavigationProperty Name="Creditos" Relationship="Self.UsuarioCreditos" FromRole="Usuarios" ToRole="Creditos" />
+  </EntityType>
+  <EntityType Name="UsuariosPistas">
+    <Key>
+      <PropertyRef Name="CodigoUsuario" />
+      <PropertyRef Name="CodigoPista" />
+      <PropertyRef Name="EstadoPista" />
+    </Key>
+    <Property Name="CodigoUsuario" Type="Int32" Nullable="false" />
+    <Property Name="CodigoPista" Type="Int32" Nullable="false" />
+    <Property Name="EstadoPista" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Pistas" Relationship="Self.FK_UsuariosPistas_Pistas" FromRole="UsuariosPistas" ToRole="Pistas" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.FK_UsuariosPistas_Usuarios" FromRole="UsuariosPistas" ToRole="Usuarios" />
+  </EntityType>
+  <Association Name="FK_UsuariosPistas_Pistas">
+    <End Role="Pistas" Type="Self.Pistas" Multiplicity="1" />
+    <End Role="UsuariosPistas" Type="Self.UsuariosPistas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pistas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="UsuariosPistas">
+        <PropertyRef Name="CodigoPista" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosPistas_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="UsuariosPistas" Type="Self.UsuariosPistas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="UsuariosPistas">
+        <PropertyRef Name="CodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UsuarioCreditos">
+    <End Role="Creditos" Type="Self.Creditos" Multiplicity="*" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="DrumsyLoopsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Creditos" EntityType="Self.Creditos" />
+    <EntitySet Name="Pistas" EntityType="Self.Pistas" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+    <EntitySet Name="UsuariosPistas" EntityType="Self.UsuariosPistas" />
+    <AssociationSet Name="FK_UsuariosPistas_Pistas" Association="Self.FK_UsuariosPistas_Pistas">
+      <End Role="Pistas" EntitySet="Pistas" />
+      <End Role="UsuariosPistas" EntitySet="UsuariosPistas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosPistas_Usuarios" Association="Self.FK_UsuariosPistas_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuariosPistas" EntitySet="UsuariosPistas" />
+    </AssociationSet>
+    <AssociationSet Name="UsuarioCreditos" Association="Self.UsuarioCreditos">
+      <End Role="Creditos" EntitySet="Creditos" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

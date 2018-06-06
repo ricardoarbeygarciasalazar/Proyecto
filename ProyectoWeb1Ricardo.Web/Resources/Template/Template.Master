@@ -26,6 +26,9 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../../js/sb-admin.min.js"></script>
+
+    <link href="../../css/sweetalert.css" rel="stylesheet">
+    <script src="../../js/sweetalert.min.js"></script>
  <asp:ContentPlaceHolder runat="server" ID="header"></asp:ContentPlaceHolder>
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">

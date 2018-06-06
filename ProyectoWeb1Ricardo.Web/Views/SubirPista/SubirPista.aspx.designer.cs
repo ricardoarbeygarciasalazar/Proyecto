@@ -7,10 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ProyectoWeb1Ricardo.Web.Views.Credito {
+namespace ProyectoWeb1Ricardo.Web.Views.SubirPista {
     
     
-    public partial class Credito {
+    public partial class SubirPista
+    {
         
         /// <summary>
         /// Control lblOpcion.

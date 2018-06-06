@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace ProyectoWeb1Ricardo.Logica.BL
 {
-     public class clsSubirPista
+    public class clsSubirPista
     {
         SqlConnection _sqlConnection = null; //me permite establecer comunicacion con la base de datos
         SqlCommand _sqlCommand = null; //me permite ejecutar comandos sql
@@ -17,6 +17,106 @@ namespace ProyectoWeb1Ricardo.Logica.BL
         String stConexion = string.Empty; //cadena de conexion
 
         SqlParameter _SqlParameter = null;
+
+        public string addSubirPista(Models.clsPistas ob) {
+            try {
+                using (Entidades.DrumsyLoopsEntities obbDrumsyLoopsEntities = new Entidades.DrumsyLoopsEntities()) {
+                    Entidades.Pistas obtbPistas = new Entidades.Pistas {
+                        Codigo = ob.inCodigo,
+                        Nombre = ob.stNombre,
+                        Genero = ob.stGenero,
+                        Demo = ob.stDemo,
+                        Observacion = ob.stObservacion,
+
+
+                    };
+                    obbDrumsyLoopsEntities.Pistas.Add(obtbPistas);
+                    obbDrumsyLoopsEntities.SaveChanges(); }
+                return "Se realizo proceso con exito";
+
+            } catch (Exception ex) {
+                throw ex;
+            }
+        }
+
+
+        public string updateSubirPista(Models.clsPistas ob)
+        {
+            try
+            {
+                using (Entidades.DrumsyLoopsEntities obbDrumsyLoopsEntities = new Entidades.DrumsyLoopsEntities())
+                {
+                    Entidades.Pistas obtbPistas = (from q in obbDrumsyLoopsEntities.Pistas
+                                                   where q.Codigo == ob.inCodigo
+                                                   select q).FirstOrDefault();
+
+                    obtbPistas.Nombre = ob.stNombre;
+                    obtbPistas.Genero = ob.stGenero;
+                    obtbPistas.Demo = ob.stDemo;
+                    obtbPistas.Observacion = ob.stObservacion;
+
+                    obbDrumsyLoopsEntities.SaveChanges();
+                }
+                return "Se realizo proceso con exito";
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public string deleteSubirPista(Models.clsPistas ob)
+        {
+            try
+            {
+                using (Entidades.DrumsyLoopsEntities obbDrumsyLoopsEntities = new Entidades.DrumsyLoopsEntities())
+                {
+                    Entidades.Pistas obtbPistas = (from q in obbDrumsyLoopsEntities.Pistas
+                                                   where q.Codigo == ob.inCodigo
+                                                   select q).FirstOrDefault();
+
+                    obbDrumsyLoopsEntities.Pistas.Remove(obtbPistas);
+
+                    obbDrumsyLoopsEntities.SaveChanges();
+                }
+                return "Se realizo proceso con exito";
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public List<Models.clsPistas> GetPistas() {
+
+
+            try {
+
+                using (Entidades.DrumsyLoopsEntities obbDrumsyLoopsEntities = new Entidades.DrumsyLoopsEntities()) {
+
+                    List<Models.clsPistas> lstclsPistas = (from q in obbDrumsyLoopsEntities.Pistas
+                                                           select new Models.clsPistas
+                                                           {
+                                                               inCodigo = q.Codigo,
+                                                               stNombre = q.Nombre,
+                                                               stGenero = q.Genero,
+                                                               stDemo = q.Demo,
+                                                               stObservacion = q.Observacion
+                                                           }).ToList();
+
+                    return lstclsPistas;
+                        }
+
+
+            } catch (Exception ex) { throw ex; }
+
+
+
+        }
+
 
 
         public clsSubirPista()

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DrumsyLoopsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Creditos">
+    <Key>
+      <PropertyRef Name="Cantidad" />
+    </Key>
+    <Property Name="CodigoCredito" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Valor" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pistas">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Genero" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Demo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Observacion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DrumsyLoops.dbo.UsuarioCreditos' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="UsuarioCreditos">
+    <Key>
+      <PropertyRef Name="CodigoUsuario" />
+      <PropertyRef Name="Creditos" />
+    </Key>
+    <Property Name="CodigoUsuario" Type="int" Nullable="false" />
+    <Property Name="Creditos" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contraseña" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="CorreoElectronico" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Imagen" Type="varchar(max)" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'DrumsyLoops.dbo.UsuariosPistas' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="UsuariosPistas">
+    <Key>
+      <PropertyRef Name="CodigoUsuario" />
+      <PropertyRef Name="CodigoPista" />
+      <PropertyRef Name="EstadoPista" />
+    </Key>
+    <Property Name="CodigoUsuario" Type="int" Nullable="false" />
+    <Property Name="CodigoPista" Type="int" Nullable="false" />
+    <Property Name="EstadoPista" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fecha" Type="date" />
+  </EntityType>
+  <Association Name="FK_UsuarioCreditos_Creditos">
+    <End Role="Creditos" Type="Self.Creditos" Multiplicity="1" />
+    <End Role="UsuarioCreditos" Type="Self.UsuarioCreditos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Creditos">
+        <PropertyRef Name="Cantidad" />
+      </Principal>
+      <Dependent Role="UsuarioCreditos">
+        <PropertyRef Name="Creditos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioCreditos_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="UsuarioCreditos" Type="Self.UsuarioCreditos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="UsuarioCreditos">
+        <PropertyRef Name="CodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosPistas_Pistas">
+    <End Role="Pistas" Type="Self.Pistas" Multiplicity="1" />
+    <End Role="UsuariosPistas" Type="Self.UsuariosPistas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pistas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="UsuariosPistas">
+        <PropertyRef Name="CodigoPista" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosPistas_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="UsuariosPistas" Type="Self.UsuariosPistas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="UsuariosPistas">
+        <PropertyRef Name="CodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DrumsyLoopsModelStoreContainer">
+    <EntitySet Name="Creditos" EntityType="Self.Creditos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pistas" EntityType="Self.Pistas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuarioCreditos" EntityType="Self.UsuarioCreditos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [UsuarioCreditos].[CodigoUsuario] AS [CodigoUsuario], 
+    [UsuarioCreditos].[Creditos] AS [Creditos]
+    FROM [dbo].[UsuarioCreditos] AS [UsuarioCreditos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UsuariosPistas" EntityType="Self.UsuariosPistas" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [UsuariosPistas].[CodigoUsuario] AS [CodigoUsuario], 
+    [UsuariosPistas].[CodigoPista] AS [CodigoPista], 
+    [UsuariosPistas].[EstadoPista] AS [EstadoPista], 
+    [UsuariosPistas].[Fecha] AS [Fecha]
+    FROM [dbo].[UsuariosPistas] AS [UsuariosPistas]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_UsuarioCreditos_Creditos" Association="Self.FK_UsuarioCreditos_Creditos">
+      <End Role="Creditos" EntitySet="Creditos" />
+      <End Role="UsuarioCreditos" EntitySet="UsuarioCreditos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioCreditos_Usuarios" Association="Self.FK_UsuarioCreditos_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuarioCreditos" EntitySet="UsuarioCreditos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosPistas_Pistas" Association="Self.FK_UsuariosPistas_Pistas">
+      <End Role="Pistas" EntitySet="Pistas" />
+      <End Role="UsuariosPistas" EntitySet="UsuariosPistas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosPistas_Usuarios" Association="Self.FK_UsuariosPistas_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="UsuariosPistas" EntitySet="UsuariosPistas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
