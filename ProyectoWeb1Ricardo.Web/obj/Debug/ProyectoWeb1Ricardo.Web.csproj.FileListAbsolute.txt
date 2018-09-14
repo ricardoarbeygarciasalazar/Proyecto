@@ -36,3 +36,5 @@ C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\Proyec
 C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\EntityFramework.xml
 C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\EntityFramework.SqlServer.xml
 C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\EntityFramework.SqlServerCompact.xml
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\Newtonsoft.Json.dll
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Web\bin\Newtonsoft.Json.xml

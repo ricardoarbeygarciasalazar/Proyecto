@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoWeb1Ricardo.Web", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoWeb1Ricardo.Logica", "ProyectoWeb1Ricardo.Logica\ProyectoWeb1Ricardo.Logica.csproj", "{19E6ACEB-C58D-4098-A9B9-2636041A8AA1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto.WS", "Proyecto.WS\Proyecto.WS.csproj", "{82F61A43-97BF-4CD0-8671-9F7C22875216}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{19E6ACEB-C58D-4098-A9B9-2636041A8AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19E6ACEB-C58D-4098-A9B9-2636041A8AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19E6ACEB-C58D-4098-A9B9-2636041A8AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82F61A43-97BF-4CD0-8671-9F7C22875216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82F61A43-97BF-4CD0-8671-9F7C22875216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82F61A43-97BF-4CD0-8671-9F7C22875216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82F61A43-97BF-4CD0-8671-9F7C22875216}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

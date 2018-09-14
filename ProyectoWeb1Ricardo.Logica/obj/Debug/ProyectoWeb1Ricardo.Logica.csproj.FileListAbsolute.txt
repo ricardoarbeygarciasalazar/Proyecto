@@ -13,3 +13,5 @@ C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\bin\Deb
 C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\bin\Debug\EntityFramework.SqlServerCompact.xml
 C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\obj\Debug\ProyectoWeb1Ricardo.Logica.csproj.CopyComplete
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Familia Garcia\source\repos\Proyecto\ProyectoWeb1Ricardo.Logica\bin\Debug\Newtonsoft.Json.xml

@@ -20,7 +20,7 @@ namespace ProyectoWeb1Ricardo.Web.Views.SubirPista
                     Controllers.SubirPistaController obsubirPistaController = new Controllers.SubirPistaController();
                 //DataSet dsConsulta = obsubirPistaController.getConsultarPistasController();
 
-                getPistas();
+                getPistasXML();
                     //if (dsConsulta.Tables[0].Rows.Count > 0)
                       //  gvwDatos.DataSource = dsConsulta;
                     //else
@@ -102,7 +102,7 @@ namespace ProyectoWeb1Ricardo.Web.Views.SubirPista
             lblOpcion.Text = txtCodigo.Text = txtNombreDeLaPista.Text = txtGeneroDeLaPista.Text = txtDescripcion.Text = txtDemo.Text;
         }
 
-        void getPistas()
+        public void getPistas()
         {
 
             try
@@ -122,6 +122,31 @@ namespace ProyectoWeb1Ricardo.Web.Views.SubirPista
 
 
         }
+
+
+        public void getPistasXML()
+        {
+
+            try
+            {
+                Controllers.SubirPistaController obsubirPistaController = new Controllers.SubirPistaController();
+                var  lstclsPistas = obsubirPistaController.getPistasXMLController();
+
+
+                if (lstclsPistas != null)
+                    gvwDatos.DataSource = lstclsPistas;
+                else
+                    gvwDatos.DataSource = null;
+                gvwDatos.DataBind();
+            }
+            catch (Exception ex) { ClientScript.RegisterStartupScript(this.GetType(), "Mensaje", "<script>alert('" + ex.Message + "')</script>"); }
+
+
+
+        }
+
+
+
 
     }
 }

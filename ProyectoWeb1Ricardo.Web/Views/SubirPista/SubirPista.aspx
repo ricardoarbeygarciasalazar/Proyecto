@@ -113,7 +113,7 @@
 
                             <asp:TemplateField HeaderText="Editar">
                                 <ItemTemplate>
-                                    <asp:ImageButton ID="IbEditar" runat="server" ImageUrl="~/Resources/Images/edit (1).png"
+                                    <asp:ImageButton ID="IbEditar" Height="20px" Width="20px" runat="server" ImageUrl="~/Resources/Images/edit (1).png"
                                         CommandName="Editar" CommandArgument="<%# ((GridViewRow)Container).RowIndex %>" />
                                 </ItemTemplate>
                                 <ItemStyle HorizontalAlign="Center" />
@@ -122,7 +122,7 @@
 
                             <asp:TemplateField HeaderText="Eliminar">
                                 <ItemTemplate>
-                                    <asp:ImageButton ID="IbEliminar" runat="server" ImageUrl="~/Resources/Images/remove.png"
+                                    <asp:ImageButton ID="IbEliminar" Height="20px" Width="20px" runat="server" ImageUrl="~/Resources/Images/remove.png"
                                         CommandName="Eliminar" CommandArgument="<%# ((GridViewRow)Container).RowIndex %>" />
                                 </ItemTemplate>
                                 <ItemStyle HorizontalAlign="Center" />

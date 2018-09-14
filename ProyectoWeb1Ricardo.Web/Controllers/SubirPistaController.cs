@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
-
+using Newtonsoft.Json;
 namespace ProyectoWeb1Ricardo.Web.Controllers
 {
     public class SubirPistaController
@@ -101,23 +101,25 @@ namespace ProyectoWeb1Ricardo.Web.Controllers
         }
 
 
-        public List<Logica.Models.clsPistas> getPistasController(Logica.Models.clsPistas obclsPistasModel)
-        {
+    //    public List<Logica.Models.clsPistas> getPistasController(Logica.Models.clsPistas obclsPistasModel)
+      //  {
 
-            try
-            {
-
-                Logica.BL.clsPistas obclsPistas = new Logica.BL.clsPistas();
-                return obclsPistas.getLasPistas(obclsPistasModel);
+        //    try
+          //  {
 
 
 
-            }
-            catch (Exception ex) { throw ex; }
+               // Logica.BL.clsPistas obclsPistas = new Logica.BL.clsPistas();
+                //return obclsPistas.getLasPistas(obclsPistasModel);
 
 
 
-        }
+            //}
+            //catch (Exception ex) { throw ex; }
+
+
+
+        //}
 
 
 
@@ -127,9 +129,19 @@ namespace ProyectoWeb1Ricardo.Web.Controllers
             try
             {
 
-                Logica.BL.clsPistas obclsPistas = new Logica.BL.clsPistas();
-                return obclsPistas.getLasPistas();
+                //   Logica.BL.clsPistas obclsPistas = new Logica.BL.clsPistas();
+                // return obclsPistas.getLasPistas();
 
+
+
+
+                wsServicios.wsServicios obwsServicios = new wsServicios.wsServicios();
+                string json = obwsServicios.getPistasWS();
+
+
+                List<Logica.Models.clsPistas> lstclsPistas = JsonConvert.DeserializeObject<List<Logica.Models.clsPistas>>(obwsServicios.getPistasWS());
+
+                return lstclsPistas;
 
 
             }
@@ -138,6 +150,39 @@ namespace ProyectoWeb1Ricardo.Web.Controllers
 
 
         }
+
+
+
+
+        public Object getPistasXMLController()
+        {
+
+            try
+            {
+                
+
+                wsServicios.wsServicios obwsServicios = new wsServicios.wsServicios();
+                
+
+          var  lstclsPistas = obwsServicios.getPistasWS_XML();
+                return lstclsPistas;
+
+
+            }
+            catch (Exception ex) { throw ex; }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
 
 
     }
